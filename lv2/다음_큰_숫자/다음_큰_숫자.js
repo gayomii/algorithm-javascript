@@ -6,13 +6,13 @@ function solution(n) {
   answer = n+1
   
   for(let i=answer; i<10000000; i++) {
-      let nextNum = i
-      let cnt = findOneCnt(nextNum)
+    let nextNum = i
+    let cnt = findOneCnt(nextNum)
       
-      if(cnt === oneCnt) {
-          answer = i
-          break
-      }
+    if(cnt === oneCnt) {
+      answer = i
+      break
+    }
   }
   
   return answer
@@ -22,8 +22,8 @@ function findOneCnt(num) {
   let cnt = 0
   
   while(num>0) {
-      if(num%2) cnt++
-      num = parseInt(num/2)
+    if(num%2) cnt++
+    num = parseInt(num/2)
   }
   
   return cnt
